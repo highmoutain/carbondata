@@ -59,7 +59,7 @@ public abstract class AbstractResultProcessor {
       carbonDataFileAttributes = new CarbonDataFileAttributes(index, loadModel.getFactTimeStamp());
     } else {
       carbonDataFileAttributes =
-          new CarbonDataFileAttributes(Long.parseLong(loadModel.getTaskNo()),
+          new CarbonDataFileAttributes(loadModel.getTaskNo(),
               loadModel.getFactTimeStamp());
     }
     carbonFactDataHandlerModel.setCarbonDataFileAttributes(carbonDataFileAttributes);
