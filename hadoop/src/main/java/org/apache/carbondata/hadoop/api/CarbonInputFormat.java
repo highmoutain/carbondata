@@ -418,8 +418,8 @@ m filterExpression
       partitionIdList = partitionInfo.getPartitionIds();
     }
     for (ExtendedBlocklet blocklet : prunedBlocklets) {
-      long partitionId = CarbonTablePath.DataFileUtil
-          .getTaskIdFromTaskNo(CarbonTablePath.DataFileUtil.getTaskNo(blocklet.getPath()));
+      long partitionId = Long.parseLong(CarbonTablePath.DataFileUtil
+          .getTaskIdFromTaskNo(CarbonTablePath.DataFileUtil.getTaskNo(blocklet.getPath())));
 
       // OldPartitionIdList is only used in alter table partition command because it change
       // partition info first and then read data.
